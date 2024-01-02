@@ -1,1 +1,120 @@
-Hello World
+html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" conten="width=device-width, initial-scale=1.0">
+        <title>Personal Portfolio Website - Samridhi </title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/e2b9dcd6e8.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header">
+             <div class="container">
+                <nav>
+                    <img src="/Users/samridhisharma/Desktop/app/logo.png" class="logo">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p>Software Developer</p>
+                    <h1> Hello and Welcome to my site, I am <span>Samridhi</span><br> </h1>
+                </div>
+             </div>
+        </div>
+        <!-----------------about------------->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                    <img src="/Users/samridhisharma/Desktop/app/pic.HEIC">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p> Hey, thanks for visiting. I am Samridhi Sharma, the host of this beautiful yet "in process" website. I am a 2nd year grad in VIT Bhopal University. I am a keen learner and problem solving enthusiast. I am a part time dancer and a full time Coder. Welcome to my world.</p>
+
+
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link " onclick= "opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick= "opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick= "opentab('eductaion')">Eductaion</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                
+                                <li><span>Software Development</span><br> web/app interface</li>
+                                <li><span>Web Development</span><br>Website Building and Design</li>
+                                <li><span>App Development</span><br>Building Andriod and IOS apps</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                
+                                <li><span>Courses</span><br>Completion of various reknowned courses with certification </li>
+                                <li><span>Internship training in various Giant Tech Companies</span><br>learning new skills </li>
+                                <li><span>Published my Research paper at the International Conference</span><br>using CNN in Pneumonia Detection</li>
+                                <li><span>Dance Club Core Member of my University</span><br>leading teams and teaching dances for events and manage several univerisity events </li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                
+                                <li><span>2022 </span><br>St. Anthony's Jr. College, Agra</li>
+                                <li><span>2022 - 2026</span><br>B.Tech in Computer Science and Engineering from VIT Bhopal University </li>
+                               
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-----------------services------------------>
+        <div id="services">
+            <div class="container">
+                <h1 class="sub-title">My Services</h1>
+                <div class="services-list"></div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Providing and Learning Web Design ,building a responsive site  </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>Software Development</h2>
+                    <p>Making software development easy by providing detailed explanatory videos and practice sessions.  </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i> 
+                    <h2>App Design</h2>
+                    <p>Building new apps and learning app developent with various features. </p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+
+        </div>
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classlist.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classlist.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+
+    </body>
+</html>
+ 
